@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Controller">
+   <children>
+      <Separator layoutX="-1.0" layoutY="148.0" prefHeight="55.0" prefWidth="706.0" />
+      <Label alignment="CENTER" layoutX="10.0" layoutY="128.0" prefHeight="47.0" prefWidth="700.0" text="Made with the guidance of David Cohen" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="74.0" prefHeight="90.0" prefWidth="700.0" text="simple yet capable graphical user interface program" textAlignment="CENTER" textFill="#4472c4" wrapText="true">
+         <font>
+            <Font name="System Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="90.0" prefWidth="700.0" text="Picture Builder">
+         <font>
+            <Font name="System Bold" size="92.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.48095238095238096" endY="1.0" startX="0.49523809523809526">
+               <stops>
+                  <Stop color="#4472c4" />
+                  <Stop color="#29416b" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <GridPane prefHeight="723.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="358.0" minWidth="10.0" prefWidth="209.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="491.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="223.0" minHeight="10.0" prefHeight="121.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="170.0" minHeight="2.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="212.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="390.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="344.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="428.0" minHeight="0.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+		<children>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="134.0" prefWidth="335.0" text="Select light type:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Label prefHeight="133.0" prefWidth="330.0" text="Select light direction" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="133.0" prefWidth="360.0" text="Select light factor" wrapText="true" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="278.0" prefHeight="133.0" prefWidth="330.0" text="Select light color:" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <ColorPicker id="color" onAction="#setColor" prefHeight="31.0" prefWidth="144.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="animal_btn" alignment="CENTER" mnemonicParsing="false" onAction="#RenderAnimal" prefHeight="75.0" prefWidth="168.0" text="Render Animal" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="sphere_btn" alignment="CENTER" mnemonicParsing="false" onAction="#RenderSphere" prefHeight="75.0" prefWidth="168.0" text="Render Sphere" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="20.0" right="25.0" top="120.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="open_btn" alignment="CENTER" layoutX="147.0" layoutY="537.0" mnemonicParsing="false" onAction="#open" prefHeight="75.0" prefWidth="168.0" text="Show File" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="20.0" right="20.0" top="120.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="exit_btn" alignment="CENTER" layoutX="355.0" layoutY="537.0" mnemonicParsing="false" onAction="#ext" prefHeight="75.0" prefWidth="168.0" text="Exit" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="200.0" right="20.0" top="120.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <VBox fx:id="radio" alignment="BASELINE_LEFT" prefHeight="67.0" prefWidth="285.0" spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <RadioButton fx:id="pl" mnemonicParsing="false" selected="true" text="Point Light">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="light" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="dl" mnemonicParsing="false" text="Directional Light" toggleGroup="$light" />
+                  <RadioButton fx:id="sl" mnemonicParsing="false" text="Spot Light" toggleGroup="$light" />
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="190.0" top="10.0" />
+               </GridPane.margin>
+            </VBox>
+			<VBox alignment="TOP_CENTER" prefHeight="12.0" prefWidth="375.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                 <Label alignment="TOP_CENTER" prefHeight="45.0" prefWidth="439.0" text="irrelevant for point light" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="-5.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                 <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="45.0" prefWidth="439.0" text="x component" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="439.0" text="y component" textAlignment="CENTER" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="TOP_CENTER" layoutX="174.0" layoutY="10.0" prefHeight="45.0" prefWidth="439.0" text="z component" textAlignment="CENTER" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Slider blockIncrement="0.01" majorTickUnit="0.5" max="1.0" min="-1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" value="-0.5" GridPane.rowIndex="1" fx:id="x">
+                           <GridPane.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </GridPane.margin>
+                        </Slider>
+                        <Slider fx:id="y" blockIncrement="0.01" layoutX="10.0" layoutY="23.0" majorTickUnit="0.5" max="1.0" min="-1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" value="-0.5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </GridPane.margin>
+                        </Slider>
+                        <Slider fx:id="z" blockIncrement="0.01" layoutX="174.0" layoutY="23.0" majorTickUnit="0.5" max="1.0" min="-1.0" minorTickCount="1" showTickLabels="true" showTickMarks="true" value="-1.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="2.0" right="2.0" />
+                           </GridPane.margin>
+                        </Slider>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="335.0" layoutY="304.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Slider fx:id="factor" blockIncrement="2.0" majorTickUnit="10.0" prefHeight="38.0" prefWidth="352.0" showTickLabels="true" showTickMarks="true" value="100.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="28.0" />
+                     </VBox.margin>
+                  </Slider>
+				  
+               </children>
+            </VBox>
+            <Label layoutX="35.0" layoutY="384.0" prefHeight="133.0" prefWidth="330.0" text="Write file name:" GridPane.rowIndex="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="filename" alignment="TOP_CENTER" promptText="enter file name please" text="image" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="100.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="rec_btn" alignment="CENTER" layoutX="219.0" layoutY="540.0" mnemonicParsing="false" onAction="#RenderRecursive" prefHeight="75.0" prefWidth="168.0" text="Render Recursive" textAlignment="CENTER" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="25.0" top="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Label layoutX="35.0" layoutY="461.0" prefHeight="133.0" prefWidth="330.0" text="Write image resulution:" GridPane.rowIndex="6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="res" alignment="TOP_CENTER" layoutX="319.0" layoutY="484.0" promptText="enter resulution please" text="500" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="100.0" right="100.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
